@@ -9,10 +9,9 @@
     <div class="card-product mb-3">
       <img src=<%= Movie.find(bookmark.movie_id).poster_url %> />
       <div class="card-product-infos">
-        <h2><%= Movie.find(bookmark.movie_id).title %></h2>
-        <p>Comment : <%= bookmark.comment %></p>
-        <p>Movie description : <%= Movie.find(bookmark.movie_id).overview %></p>
-        <p>Rating : <%= Movie.find(bookmark.movie_id).rating %>/10</p>
+        <h4><%= Movie.find(bookmark.movie_id).title %> - <%= Movie.find(bookmark.movie_id).rating %> <i class="fa-solid fa-star" id="star"></i></h4>
+        <p><strong>Comment :</strong> <%= bookmark.comment %></p>
+        <p><strong>Movie description :</strong> <%= Movie.find(bookmark.movie_id).overview %></p>
         <p class="text-end"><%= link_to 'delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-primary" %></p>
       </div>
     </div>
