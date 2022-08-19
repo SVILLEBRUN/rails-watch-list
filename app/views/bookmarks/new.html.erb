@@ -1,13 +1,17 @@
-<h1 class="text-center">New Bookmark</h1>
+<%= render 'layouts/navbar' %>
 
 
-<div class="container w-50 mx-auto p-3 bg-white rounded shadow-sm">
-  <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.association :movie %>
-    <%= f.input :comment %>
-    <%= f.submit %>
-  <% end %>
-  <div class="mt-5">
-    <%= link_to 'Go to list', list_path(@list), class:"btn btn-primary" %>
+<div class="container">
+  <h1 class="text-center">New Bookmark</h1>
+
+  <div class="container w-50 mx-auto p-3 bg-white rounded shadow-sm">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
+      <%= f.submit %>
+    <% end %>
+    <div class="mt-5">
+      <%= link_to 'Go to list', list_path(@list), class:"btn btn-primary" %>
+    </div>
   </div>
 </div>

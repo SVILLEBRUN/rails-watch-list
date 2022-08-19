@@ -1,11 +1,12 @@
-<h1 class="text-center">Create your list</h1>
+<%= render 'layouts/navbar' %>
 
-<div class="container w-50 mx-auto p-3 bg-white rounded shadow-sm">
-  <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.submit %>
-  <% end %>
-  <div class="mt-5 text-center">
-    <%= link_to 'Go to list index', lists_path, class:"btn btn-primary" %>
+<div class="container">
+  <h1 class="text-center">Create your list</h1>
+
+  <div class="container w-50 mx-auto p-3 bg-white rounded shadow-sm">
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name %>
+      <%= f.submit %>
+    <% end %>
   </div>
 </div>
